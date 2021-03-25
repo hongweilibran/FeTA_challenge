@@ -16,5 +16,5 @@ docker stop $CONTAINERID
 docker rm -v $CONTAINERID
 ```
 ## Acknowledgement
-We thank Hugo J. Kuijf's (UMC Utrecht) original instruction on Docker in MICCAI WMH segmentation challenge 2017.
+We thank Hugo J. Kuijf's (UMC Utrecht) original Docker instruction in MICCAI WMH segmentation challenge 2017.
 This repository is modified based on his codes.
