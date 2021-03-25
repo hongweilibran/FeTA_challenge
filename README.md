@@ -11,7 +11,7 @@ A detailed description of the Python example is provided here: [WEBSITE-TO-BE-UP
 Containers submitted to the challenge will be run with the following commands:
 
 ```
-CONTAINERID=`docker run -dit -v [TEST-INPUT]:/input/anat:ro -v /output FeTAchallenge/[TEAM-NAME]`
+CONTAINERID=`docker run -dit -v [TEST-INPUT]:/input/anat:ro -v /output feta_challenge/[TEAM-NAME]`
 docker exec $CONTAINERID [YOUR-COMMAND]
 docker cp $CONTAINERID:/output [RESULT-TEAM]
 docker stop $CONTAINERID
