@@ -1,5 +1,5 @@
 # FeTA Segmentation Challenge in MICCAI 2021
-Example docker containers for FeTA Segmentation Challenge. 
+Example docker containers for the FeTA Segmentation Challenge. 
 
 The example script simply do thresholding of the *anat/[SUBJECT-ID]_T2W.nii.gz* image at 100. The participants could define their logic based on this demo.
 
