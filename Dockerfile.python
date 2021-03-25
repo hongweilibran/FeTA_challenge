@@ -3,4 +3,4 @@ MAINTAINER hongweilibran
 
 RUN pip install numpy SimpleITK
 
-ADD python/src /FeTA_seg_example
+ADD python/src /FeTA_seg
