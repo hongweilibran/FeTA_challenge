@@ -1,6 +1,6 @@
 FROM continuumio/miniconda
-MAINTAINER hjkuijf
+MAINTAINER hongweilibran
 
 RUN pip install numpy SimpleITK
 
-ADD python/src /wmhseg_example
+ADD python/src /FeTA_seg_example
