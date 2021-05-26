@@ -9,10 +9,11 @@ import SimpleITK as sitk
 inputDir = '/input'
 outputDir = '/output'
 
-head_tail = os.path.split(inputDir) # to split the input directory and to obtain the suject name
+T2wImagePath = glob.glob(os.path.join(inputDir, ‘anat’, ‘sub-*_T2w.nii.gz’))[0] 
+sub = os.path.split(T2wImagePath)[1].split(‘_’)[0] # to split the input directory and to obtain the suject name 
 
 # Load the image
-T2wImage = sitk.ReadImage(os.path.join(inputDir, 'anat', head_tail+'_T2w.nii.gz'))
+T2wImage = sitk.ReadImage(T2wImagePath)
 
 ##
 # your logic here. Below we do binary thresholding as a demo
@@ -20,5 +21,5 @@ T2wImage = sitk.ReadImage(os.path.join(inputDir, 'anat', head_tail+'_T2w.nii.gz'
 
 # using SimpleITK to do binary thresholding between 100 - 10000
 resultImage = sitk.BinaryThreshold(T2wImage, lowerThreshold=100, upperThreshold=10000)
-
-sitk.WriteImage(resultImage, os.path.join(outputDir, 'seg_result.nii.gz'))
+# save the segmentation mask
+sitk.WriteImage(resultImage, os.path.join(outputDir, sub + '_seg_result.nii.gz'))
