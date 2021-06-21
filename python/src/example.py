@@ -4,6 +4,7 @@
 """
 
 import os
+import glob
 import SimpleITK as sitk
 
 inputDir = '/input'
