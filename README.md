@@ -10,7 +10,7 @@ A detailed description of the Python example is provided here: https://feta-2021
 Containers submitted to the challenge will be run with the following commands:
 
 ```
-CONTAINERID=`docker run -dit -v [TEST-INPUT]:/input/anat:ro -v /output feta_challenge/[TEAM-NAME]`
+CONTAINERID=`docker run -dit -v [TEST-INPUT-IMG]:/input_img/:ro -v [TEST-INPUT-META]:/input_meta/:ro -v /output feta_challenge/[TEAM-NAME]`
 docker exec $CONTAINERID [YOUR-COMMAND]
 docker cp $CONTAINERID:/output [RESULT-TEAM]
 docker stop $CONTAINERID
